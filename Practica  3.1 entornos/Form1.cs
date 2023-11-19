@@ -31,11 +31,17 @@ namespace Practica__3._1_entornos
 
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
+
             // telegrama urgente?
             if (radioButtonU.Checked)
                 tipoTelegrama = 'u';
+
+            if (radioButtonO.Checked)
+                tipoTelegrama = 'O';
+
             //Obtengo el número de palabras que forma el telegrama 
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ').Length;
+
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
